@@ -93,7 +93,7 @@ def send_otp(request):
     subject = 'About Login...'
     message = (f'Hi ,your Login process is started  on Midnight delights and your otp is  otp is {otp}'
                f'Your Otp is valid for Five minutes only')
-    email_from = 'nisargt1782@gmail.com'
+    email_from = ''
     cus = [email]
     send_mail(subject, message, email_from, cus)
     return redirect("otp")
@@ -413,8 +413,8 @@ def saveContact(request):
         message = request.POST.get("message")
         subject = "Contact"
         message = "Hey," + email + " is contacting you. " + message
-        email_from = "nisargt1782@gmail.com"
-        cus = ['dvp060723@gmail.com']
+        email_from = ""
+        cus = ['']
         send_mail(subject, message, email_from, cus)
         if (send_mail):
             messages.success(request, "Success👏,We are contacting you shortly.")
